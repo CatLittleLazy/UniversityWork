@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>
+
+
+  <!--底部导航选择的颜色-->
+  <color name="tabColorNormal">#9B9B9B</color>
+  <color name="tabColorSelected">#2BBFBD</color>
+  <!--顶部颜色-->
+  <color name="tabColorTop">#08658E</color>
+  <!--顶部导航字体颜色-->
+  <color name="topTxtSelected">#ffffff</color>
+  <color name="topTxtnormal">#4FBADA</color>
+  <!--个人中心选项按下颜色-->
+  <color name="centerBarNormal">#FFFFFF</color>
+  <color name="centerBarPressed">#ebebeb</color>
+
+  <color name="colorRed">#F00</color>
+  <color name="colorLoading">#D4D4D4</color>
+  <color name="btnPressed">#1398D0</color>
+
+  <color name="blue">#0000ff</color>
+
+  <color name="loginTextPressed">#056690</color>
+  <color name="notValidate">#aaa</color>
+  <color name="loginTextNormal">#FFFFFF</color>
+  <color name="pluginTextNormal">#757575</color>
+</resources>

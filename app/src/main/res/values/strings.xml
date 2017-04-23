@@ -1,0 +1,36 @@
+<resources>
+  <string name="app_name">IntellectualPropertyRight</string>
+  <string name="title_home">Home</string>
+  <string name="title_dashboard">Dashboard</string>
+  <string name="title_notifications">Notifications</string>
+
+
+  <string name="username_hint">手机号/邮箱登录</string>
+  <string name="username_sign_up_hint">手机号/邮箱</string>
+  <string name="pwd_sign_up_hint">请输入6~12位密码</string>
+  <string name="password_hint">密码登录</string>
+  <string name="center_about_us">关于维萨里</string>
+  <string name="center_feedback">用户反馈</string>
+  <string name="center_system_identify">系统认证</string>
+  <string name="center_buy_software">软件购买</string>
+  <string name="center_my_message">我的消息</string>
+  <string name="center_check_new_version">检测更新</string>
+  <string name="center_exit_login">退出登录</string>
+  <string name="user_fragment_icon_switch_title">设置头像</string>
+  <string name="user_fragment_icon_from_pick_picture">相册</string>
+  <string name="user_fragment_icon_from_take_photo">相机</string>
+  <string name="user_fragment_icon_set_failed">设置头像失败</string>
+  <string name="no_ask_again">不再询问</string>
+  <string name="something_will_wrong">若再次拒绝，APP部分功能将无法使用</string>
+  <!--关于维萨里-->
+  <string name="about_us_title">关于维萨里</string>
+  <string name="can_not_find_version_name">获取版本号失败</string>
+  <string name="about_us_product_introduce">功能介绍</string>
+  <string name="version_name">维萨里 </string>
+  <string name="about_us_user_feed_back">用户反馈</string>
+  <string name="about_us_update">检测更新</string>
+  <string name="about_us_sercet_and_security">使用条款和隐私政策</string>
+  <string name="about_us_app_copy_right">维萨里数字科技 版权所有\n软易科技提供技术服务\nCopyright © 2016-2017 www.vesal.cn</string>
+  <string name="edit_info">个人信息</string>
+  <string name="user_message_title">消息中心</string>
+</resources>

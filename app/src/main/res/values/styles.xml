@@ -1,0 +1,54 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+
+  <!--个人中心选项的文字-->
+  <style name="UserCenterText">
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:layout_marginLeft">25px</item>
+    <item name="android:textColor">#000000</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+  </style>
+  <!--个人中心图标-->
+  <style name="UserCenterIcon">
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:layout_width">65px</item>
+    <item name="android:layout_height">65px</item>
+    <item name="android:layout_marginLeft">80px</item>
+  </style>
+  <!--个人中心箭头-->
+  <style name="UserCenterArrow">
+    <item name="android:layout_width">65px</item>
+    <item name="android:layout_height">65px</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_centerVertical">true</item>
+    <item name="android:layout_marginRight">80px</item>
+  </style>
+  <!--注册界面协议选择框  2017.4.11  by  WYT-->
+  <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">@color/white</item>
+    <item name="colorControlActivated">@color/white</item>
+  </style>
+
+  <color name="gray">#888888</color>
+  <color name="white">#056690</color>
+
+
+  <!--反馈界面选择框样式-->
+  <style name="FeedBackRadioButton">
+    <item name="android:gravity">center</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:textColor">@color/gray</item>
+    <item name="android:background">@drawable/feed_back_text_view_bg</item>
+    <item name="android:layout_marginRight">10dp</item>
+  </style>
+
+</resources>
