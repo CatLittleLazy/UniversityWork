@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">IntellectualPropertyRight</string>
+  <string name="app_name">知识产权服务</string>
   <string name="title_home">Home</string>
   <string name="title_dashboard">Dashboard</string>
   <string name="title_notifications">Notifications</string>
@@ -9,11 +9,11 @@
   <string name="username_sign_up_hint">手机号/邮箱</string>
   <string name="pwd_sign_up_hint">请输入6~12位密码</string>
   <string name="password_hint">密码登录</string>
-  <string name="center_about_us">关于维萨里</string>
+  <string name="center_about_us">关于我们</string>
   <string name="center_feedback">用户反馈</string>
   <string name="center_system_identify">系统认证</string>
   <string name="center_buy_software">软件购买</string>
-  <string name="center_my_message">我的消息</string>
+  <string name="center_my_message">账户记录</string>
   <string name="center_check_new_version">检测更新</string>
   <string name="center_exit_login">退出登录</string>
   <string name="user_fragment_icon_switch_title">设置头像</string>

@@ -25,9 +25,13 @@ public class MainActivity extends AppCompatActivity {
           return true;
         case R.id.navigation_dashboard:
           mTextMessage.setText(R.string.title_dashboard);
+          frameLayout.removeAllViews();
+          frameLayout.addView(View.inflate(MainActivity.this, R.layout.activity_signup, null));
           return true;
         case R.id.navigation_notifications:
           mTextMessage.setText(R.string.title_notifications);
+          frameLayout.removeAllViews();
+          frameLayout.addView(View.inflate(MainActivity.this, R.layout.user_fragment, null));
           return true;
       }
       return false;

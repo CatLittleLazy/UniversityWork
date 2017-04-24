@@ -34,4 +34,12 @@
   <dimen name="margin_50px">50px</dimen>
   <dimen name="layout_width_200px">200px</dimen>
   <dimen name="layout_height_200px">200px</dimen>
+  <dimen name="text_size_18sp">18sp</dimen>
+  <dimen name="margin_40dp">40dp</dimen>
+  <dimen name="margin_10dp">10dp</dimen>
+  <dimen name="margin_5dp">5dp</dimen>
+  <dimen name="margin_30dp">30dp</dimen>
+  <dimen name="text_size_20sp">20sp</dimen>
+  <dimen name="layout_width_35dp">35dp</dimen>
+  <dimen name="layout_height_35dp">35dp</dimen>
 </resources>

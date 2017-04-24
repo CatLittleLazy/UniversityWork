@@ -25,11 +25,13 @@ dependencies {
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
+  //    圆角库      https://github.com/hdodenhof/CircleImageView 2017.4.7 by WYT
+  //    网络请求库   https://github.com/square/okhttp
   compile 'com.android.support:appcompat-v7:25.3.1'
   compile 'com.android.support:design:25.3.1'
   compile 'com.android.support:support-vector-drawable:25.3.1'
-  testCompile 'junit:junit:4.12'
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
-  //    圆角库  https://github.com/hdodenhof/CircleImageView 2017.4.7 by WYT
   compile 'de.hdodenhof:circleimageview:2.1.0'
+  compile 'com.squareup.okhttp3:okhttp:3.7.0'
+  testCompile 'junit:junit:4.12'
 }
