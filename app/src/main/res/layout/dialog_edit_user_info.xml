@@ -1,0 +1,57 @@
+<!--?xml version=1.0 encoding=utf-8?-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/layout_heigt_150px"
+      android:background="#ffffff"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#000000"
+        android:textSize="@dimen/text_size_55px" />
+  </RelativeLayout>
+
+
+  <EditText
+      android:id="@+id/txt_dialog_content"
+      android:layout_width="match_parent"
+      android:layout_height="100px"
+      android:layout_margin="@dimen/margin_50px"
+      android:background="@drawable/feed_back_text_view_bg"
+      android:gravity="center|start"
+      android:hint="最多输入18字"
+      android:lines="1"
+      android:maxLength="18"
+      android:textSize="@dimen/text_size_40px" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:gravity="center"
+      android:visibility="gone">
+
+    <Button
+        android:id="@+id/dialog_btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="50px"
+        android:background="@drawable/feed_back_text_view_bg"
+        android:text="确定" />
+
+    <Button
+        android:id="@+id/dialog_btn_bye"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/feed_back_text_view_bg"
+        android:text="取消" />
+  </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:background="@color/primary"
+      android:elevation="3dp"
+      app:navigationIcon="@drawable/ic_arrow_back"
+      app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="上传服务"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+  </android.support.v7.widget.Toolbar>
+
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:background="@drawable/selector_about_linear_layout"
+      android:layout_marginTop="20dp">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="封面"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:id="@+id/image_post_icon"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="50dp"
+      android:layout_width="match_parent"
+      android:background="@drawable/selector_about_linear_layout"
+      android:layout_marginTop="20dp">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="标题"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/edit_post_title"
+        android:gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:maxLength="25"
+        android:textSize="14sp"
+        android:background="@null"
+        android:hint="请输入服务标题" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="160dp"
+      android:layout_width="match_parent"
+      android:background="@drawable/selector_about_linear_layout">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="内容描述"
+        android:gravity="center_vertical" />
+
+    <EditText
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/edit_post_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="4dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:textSize="15sp"
+        android:maxLength="90"
+        android:background="@drawable/feed_back_text_view_bg"
+        android:hint="请输入知识产权服务描述"
+        android:layout_marginBottom="10dp" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="50dp"
+      android:layout_width="match_parent"
+      android:background="@drawable/selector_about_linear_layout">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="价格"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/edit_post_price"
+        android:gravity="end"
+        android:background="@null"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:maxLength="10"
+        android:textSize="14sp"
+        android:inputType="numberDecimal"
+        android:hint="请输入该服务价格" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+  <android.support.v7.widget.AppCompatButton
+      android:id="@+id/btn_update_post"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      android:layout_marginBottom="24dp"
+      android:background="@drawable/login_bg"
+      android:textColor="#ffffff"
+      android:layout_marginLeft="50dp"
+      android:layout_marginRight="50dp"
+      android:textSize="18sp"
+      android:text="上传服务" />
+</LinearLayout>

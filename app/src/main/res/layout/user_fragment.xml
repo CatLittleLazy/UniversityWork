@@ -13,25 +13,19 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/top_center_height"
-        android:background="#FFFFFF">
-
-      <RelativeLayout
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/top_bg_center_height"
-          android:background="@drawable/user_center_head_bg" />
+        android:layout_height="250dp"
+        android:background="@drawable/user_bg">
 
       <!--头像-->
       <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
           android:id="@+id/iv_user_icon"
-          android:layout_width="270px"
-          android:layout_height="270px"
-          android:layout_centerHorizontal="true"
-          android:layout_marginTop="420px"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_centerInParent="true"
           android:scaleType="centerCrop"
-          android:src="@mipmap/ic_launcher_round"
+          android:src="@drawable/default_head"
           app:civ_border_color="#ffffff"
-          app:civ_border_width="8px" />
+          app:civ_border_width="2dp" />
 
       <!-- 编辑 -->
       <TextView
@@ -39,11 +33,11 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_alignParentRight="true"
-          android:layout_marginRight="85px"
-          android:layout_marginTop="@dimen/top_text_margin"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="20dp"
           android:text="编辑"
           android:textColor="#FFFFFF"
-          android:textSize="55px" />
+          android:textSize="18sp" />
 
       <!-- 用户名称 -->
       <TextView
@@ -51,19 +45,19 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_below="@id/iv_user_icon"
-          android:layout_centerHorizontal="true"
-          android:layout_marginTop="5px"
-          android:text="用户名11211"
-          android:textColor="#000000" />
+          android:layout_centerInParent="true"
+          android:layout_marginTop="20dp"
+          android:text="youmehe"
+          android:textColor="#ffffff" />
 
     </RelativeLayout>
 
-    <!-- 关于我们 -->
+    <!-- 我的收藏 -->
     <RelativeLayout
-        android:id="@+id/relative_about_us"
+        android:id="@+id/relative_my_save"
         android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:layout_marginTop="35px"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/user_center_press_selector"
         android:clickable="true"
         android:orientation="horizontal">
@@ -71,23 +65,23 @@
       <ImageView
           android:id="@+id/iv_icon1"
           style="@style/UserCenterIcon"
-          android:src="@mipmap/about_use_icon" />
+          android:src="@drawable/my_save_icon" />
 
       <TextView
           style="@style/UserCenterText"
           android:layout_toRightOf="@id/iv_icon1"
-          android:text="@string/center_about_us" />
+          android:text="我的收藏" />
 
     </RelativeLayout>
 
     <include layout="@layout/divider_user_center" />
 
-    <!-- 修改密码 -->
+    <!-- 意见反馈 -->
 
     <RelativeLayout
-        android:id="@+id/change_password"
+        android:id="@+id/relative_feed_back"
         android:layout_width="match_parent"
-        android:layout_height="150px"
+        android:layout_height="50dp"
         android:background="@drawable/user_center_press_selector"
         android:clickable="true"
         android:orientation="horizontal">
@@ -95,21 +89,23 @@
       <ImageView
           android:id="@+id/iv_icon7"
           style="@style/UserCenterIcon"
-          android:src="@mipmap/password" />
+          android:src="@drawable/feed_back_icon" />
 
       <TextView
           style="@style/UserCenterText"
           android:layout_toRightOf="@id/iv_icon7"
-          android:text="修改密码" />
+          android:text="意见反馈" />
 
     </RelativeLayout>
 
     <include layout="@layout/divider_user_center" />
-    <!-- 我的消息 -->
+
+    <!-- 上传服务 -->
+
     <RelativeLayout
-        android:id="@+id/my_message_container"
+        android:id="@+id/relative_update_server"
         android:layout_width="match_parent"
-        android:layout_height="150px"
+        android:layout_height="50dp"
         android:background="@drawable/user_center_press_selector"
         android:clickable="true"
         android:orientation="horizontal">
@@ -117,7 +113,7 @@
       <ImageView
           android:id="@+id/iv_icon5"
           style="@style/UserCenterIcon"
-          android:src="@mipmap/my_msg_icon" />
+          android:src="@drawable/upload_icon" />
       <!--这里的dp不能改-->
       <TextView
           android:id="@+id/tv_my_message"
@@ -126,19 +122,77 @@
           android:layout_centerVertical="true"
           android:layout_marginLeft="25px"
           android:layout_toRightOf="@id/iv_icon5"
-          android:width="83dp"
           android:gravity="center_vertical"
-          android:text="@string/center_my_message"
+          android:text="上传服务"
           android:textColor="#000000" />
 
 
     </RelativeLayout>
 
     <include layout="@layout/divider_user_center" />
-    <!-- 退出登录 -->
+
+    <!-- 版本更新 -->
+
     <RelativeLayout
+        android:id="@+id/relative_new_version"
         android:layout_width="match_parent"
-        android:layout_height="170px"
+        android:layout_height="50dp"
+        android:background="@drawable/user_center_press_selector"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:id="@+id/iv_iconx"
+          style="@style/UserCenterIcon"
+          android:src="@drawable/new_version" />
+      <!--这里的dp不能改-->
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="45dp"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="25px"
+          android:layout_toRightOf="@id/iv_iconx"
+          android:gravity="center_vertical"
+          android:text="版本更新"
+          android:textColor="#000000" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/divider_user_center" />
+
+    <RelativeLayout
+        android:id="@+id/relative_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/user_center_press_selector"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:id="@+id/iv_icon_last"
+          style="@style/UserCenterIcon"
+          android:src="@drawable/about_us" />
+      <!--这里的dp不能改-->
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="45dp"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="25px"
+          android:layout_toRightOf="@id/iv_icon_last"
+          android:gravity="center_vertical"
+          android:text="关于我们"
+          android:textColor="#000000" />
+      
+    </RelativeLayout>
+
+    <include layout="@layout/divider_user_center" />
+    <!-- 退出登录 -->
+
+    <RelativeLayout
+        android:id="@+id/realtive_exit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:background="@drawable/user_center_press_selector"
         android:clickable="true"
         android:orientation="horizontal">
@@ -146,7 +200,7 @@
       <ImageView
           android:id="@+id/iv_icon6"
           style="@style/UserCenterIcon"
-          android:src="@mipmap/exit_app_icon" />
+          android:src="@drawable/exit" />
 
       <TextView
           style="@style/UserCenterText"

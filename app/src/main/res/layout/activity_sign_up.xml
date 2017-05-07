@@ -7,7 +7,7 @@
   <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="50px"
+      android:layout_marginTop="25dp"
       android:orientation="horizontal">
 
     <ImageView
@@ -16,7 +16,7 @@
         android:layout_height="@dimen/layout_height_35dp"
         android:layout_centerVertical="true"
         android:layout_gravity="left"
-        android:layout_marginLeft="50px"
+        android:layout_marginLeft="25dp"
         android:clickable="true"
         android:src="@mipmap/back_icon_normal" />
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="main_item">
+    <item>商标补证加急申请注册商标转让商标起名设计咨询知识产权专利申请</item>
+    <item>Item竖向菜单</item>
+    <item>ViewType定制菜单</item>
+    <item>ViewPager嵌套</item>
+    <item>DrawerLayout嵌套</item>
+    <item>CardView嵌套菜单</item>
+    <item>自定义侧滑</item>
+    <item>刷新、加载更多</item>
+    <item>List拖拽+菜单</item>
+    <item>Grid拖拽+菜单</item>
+    <item>触摸拖拽</item>
+    <item>拖拽+侧滑删除</item>
+    <item>自定义拖拽/侧滑参数</item>
+  </string-array>
+
+  <string-array name="main_item_des">
+    <item>¥ 1200.00</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+    <item>$ 20</item>
+  </string-array>
+</resources>

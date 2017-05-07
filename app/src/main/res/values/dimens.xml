@@ -42,4 +42,7 @@
   <dimen name="text_size_20sp">20sp</dimen>
   <dimen name="layout_width_35dp">35dp</dimen>
   <dimen name="layout_height_35dp">35dp</dimen>
+  <dimen name="app_bar_height">180dp</dimen>
+  <dimen name="fab_margin">16dp</dimen>
+  <dimen name="text_margin">16dp</dimen>
 </resources>

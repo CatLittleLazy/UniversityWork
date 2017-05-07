@@ -19,7 +19,7 @@
         android:layout_marginBottom="24dp"
         android:layout_gravity="center_horizontal" />
 
-    <!-- Name Label -->
+    <!--  Email Label -->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,15 +27,13 @@
         android:layout_marginBottom="8dp">
 
       <EditText
-          android:id="@+id/input_name"
+          android:id="@+id/input_email"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:inputType="textPersonName"
           android:hint="用户名" />
     </android.support.design.widget.TextInputLayout>
 
-
-    <!-- Password Label -->
+    <!--  Password Label -->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,63 +48,25 @@
           android:hint="密码" />
     </android.support.design.widget.TextInputLayout>
 
-    <!-- Password Re-enter Label -->
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
-
-      <EditText
-          android:id="@+id/input_reEnterPassword"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPassword"
-          android:hint="再次输入密码" />
-    </android.support.design.widget.TextInputLayout>
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/margin_10dp">
-
-      <RadioButton
-          android:id="@+id/normal_user"
-          android:layout_width="0dp"
-          android:layout_weight="1"
-          android:layout_height="wrap_content"
-          android:text="普通用户" />
-
-      <RadioButton
-          android:id="@+id/unnormal_user"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="知识产权服务提供商" />
-
-    </RadioGroup>
-
-    <!-- Signup Button -->
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_signup"
-        android:layout_width="fill_parent"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="24dp"
-        android:padding="12dp"
-        android:textColor="#ffffff"
         android:background="@drawable/login_bg"
-        android:text="创建账号"
-        android:textSize="18sp" />
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="登录" />
 
     <TextView
-        android:id="@+id/link_login"
+        android:id="@+id/link_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="已拥有账号?"
+        android:text="注册账号"
         android:gravity="right"
-        android:textSize="16sp" />
+        android:textSize="16dip" />
 
   </LinearLayout>
 </ScrollView>

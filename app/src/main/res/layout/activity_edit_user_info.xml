@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_edit_my_info">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:background="@color/primary"
+      android:elevation="3dp"
+      app:navigationIcon="@drawable/ic_arrow_back"
+      app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="编辑信息"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+  </android.support.v7.widget.Toolbar>
+
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="100dp"
+      android:layout_width="match_parent"
+      android:id="@+id/linear_edit_user_icon"
+      android:background="@drawable/selector_about_linear_layout"
+      android:clickable="true"
+      android:layout_marginTop="20dp">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="头像"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <!--头像-->
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_height="85dp"
+        android:layout_width="85dp"
+        android:id="@+id/image_edit_user_icon"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="50dp"
+      android:layout_width="match_parent"
+      android:id="@+id/linear_edit_user_nickname"
+      android:background="@drawable/selector_about_linear_layout"
+      android:layout_marginTop="20dp">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="昵称"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txt_edit_user_nickname"
+        android:gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:hint="请输入昵称" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="50dp"
+      android:layout_width="match_parent"
+      android:id="@+id/linear_edit_user_sexual"
+      android:background="@drawable/selector_about_linear_layout"
+      android:clickable="true">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="性别"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txt_edit_user_sexual"
+        android:gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:hint="请选择性别" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="50dp"
+      android:layout_width="match_parent"
+      android:id="@+id/linear_edit_user_birthday"
+      android:background="@drawable/selector_about_linear_layout"
+      android:clickable="true">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="出生日期"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txt_edit_user_birthday"
+        android:gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:hint="请选择出生日期" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_height="50dp"
+      android:layout_width="match_parent"
+      android:id="@+id/linear_edit_user_area"
+      android:background="@drawable/selector_about_linear_layout"
+      android:clickable="true">
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:text="省市区"
+        android:gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txt_edit_user_area"
+        android:gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:hint="请选择所在地区" />
+
+  </LinearLayout>
+
+  <include layout="@layout/divider_user_center" />
+
+
+</LinearLayout>

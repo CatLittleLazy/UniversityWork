@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+  <android.support.v7.widget.SearchView
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:searchIcon="@drawable/search" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#f0f0f0" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/sale_test"
+          android:layout_gravity="center"
+          android:layout_marginTop="10dp" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="销量"
+          android:layout_marginTop="@dimen/margin_5dp"
+          android:layout_gravity="center"
+          android:textColor="#c0c0c0"
+          android:textSize="10sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/rating"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/margin_10dp" />
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="评价"
+          android:layout_marginTop="@dimen/margin_5dp"
+          android:layout_gravity="center"
+          android:textColor="#c0c0c0"
+          android:textSize="10sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/price_low_to_top"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/margin_10dp" />
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="价格由高到低"
+          android:layout_marginTop="@dimen/margin_5dp"
+          android:layout_gravity="center"
+          android:textColor="#c0c0c0"
+          android:textSize="10sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:src="@drawable/price_top_to_low"
+          android:layout_gravity="center"
+          android:layout_marginTop="@dimen/margin_10dp" />
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="价格由低到高"
+          android:layout_marginTop="@dimen/margin_5dp"
+          android:layout_gravity="center"
+          android:textColor="#c0c0c0"
+          android:textSize="10sp" />
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#f0f0f0" />
+
+
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/margin_25px">
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

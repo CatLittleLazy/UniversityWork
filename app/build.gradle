@@ -5,7 +5,7 @@ android {
   buildToolsVersion "25.0.2"
   defaultConfig {
     applicationId "com.example.youmehe.intellectualpropertyright"
-    minSdkVersion 15
+    minSdkVersion 16
     targetSdkVersion 25
     versionCode 1
     versionName "1.0"
@@ -18,20 +18,47 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+  //为了解决部分第三方库重复打包了META-INF的问题
+  packagingOptions {
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'META-INF/NOTICE.txt'
+  }
+  lintOptions {
+    abortOnError false
+  }
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile fileTree(include: ['*.jar'], dir: 'libs')
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
   //    圆角库      https://github.com/hdodenhof/CircleImageView 2017.4.7 by WYT
   //    网络请求库   https://github.com/square/okhttp
+  //    LeanCloud 基础包
+  //    推送与实时聊天需要的包
+  compile('cn.leancloud.android:avoscloud-push:v3.+@aar') { transitive = true }
+  //    LeanCloud 统计包
+  //    注解框架
+  //
+  //
+  //    异步加载图片
+  //    选择省市区库
+  //    Ucrop裁图库  https://github.com/Yalantis/uCrop 2017.4.7 by WYT
   compile 'com.android.support:appcompat-v7:25.3.1'
   compile 'com.android.support:design:25.3.1'
   compile 'com.android.support:support-vector-drawable:25.3.1'
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
   compile 'de.hdodenhof:circleimageview:2.1.0'
   compile 'com.squareup.okhttp3:okhttp:3.7.0'
+  compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
+  compile 'cn.leancloud.android:avoscloud-statistics:v3.+'
+  compile 'com.google.code.gson:gson:2.8.0'
+  compile 'com.jakewharton:butterknife:7.0.1'
+  compile 'com.yanzhenjie:recyclerview-swipe:1.0.4'
+  compile 'com.android.support:cardview-v7:25.2.0'
+  compile 'com.squareup.picasso:picasso:2.5.2'
+  compile 'com.contrarywind:Android-PickerView:3.2.4'
+  compile 'com.yalantis:ucrop:2.2.0'
   testCompile 'junit:junit:4.12'
 }

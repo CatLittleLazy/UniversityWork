@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_scrolling"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_marginBottom="50dp"
+    tools:context="com.example.youmehe.intellectualpropertyright.Activity.ScrollingActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:text="中国外国专利全文查询下载账号永久不限量申请号名称查找专利检索" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/margin_10dp"
+          android:layout_marginRight="@dimen/margin_10dp"
+          android:text="¥"
+          android:textColor="#ff0000" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="300.00"
+          android:textColor="#ff0000"
+          android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="累计销量 223"
+          android:textSize="10sp"
+          android:layout_gravity="right"
+          android:layout_marginTop="5dp"
+          android:layout_marginLeft="@dimen/margin_10dp"
+          android:layout_marginRight="@dimen/margin_10dp" />
+
+      <RatingBar
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:rating="2"
+          android:numStars="5"
+          android:layout_alignParentRight="true"
+          android:layout_gravity="right"
+          style="?android:attr/ratingBarStyleSmall" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:background="#fafafa" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商家介绍"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10dp"
+        android:textSize="18sp"
+        android:textColor="#bf000000"
+        android:text="        一家能够一站式提供各类专业性服务的企业一家能够帮助企业进步，陪伴企业成长的企业。重诚致信，携手共进。一家能够一站式提供各类专业性服务的企业，一家能够帮助企业进步，陪伴企业成长的企业。重诚致信，携手共进。一家能够一站式提供各类专业性服务的企业，一家能够帮助企业进步，陪伴企业成长的企业。重诚致信，携手共进。一家能够一站式提供各类专业性服务的企业，一家能够帮助企业进步，陪伴企业成长的企业。重诚致信，携手共进。一家能够一站式提供各类专业性服务的企业，一家能够帮助企业进步，陪伴企业成长的企业。重诚致信，携手共进。" />
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
