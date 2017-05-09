@@ -25,6 +25,7 @@
           android:id="@+id/toolbar"
           android:layout_height="?attr/actionBarSize"
           android:layout_width="match_parent"
+          android:navigationIcon="@drawable/ic_arrow_back"
           app:layout_collapseMode="pin"
           app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -47,10 +48,12 @@
       android:layout_gravity="bottom">
 
     <LinearLayout
+        android:id="@+id/linear_chat"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#fafafa">
+        android:clickable="true"
+        android:background="@drawable/selector_about_linear_layout">
 
       <ImageView
           android:layout_width="25dp"
@@ -75,12 +78,15 @@
 
 
     <LinearLayout
+        android:id="@+id/linear_save"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#fafafa">
+        android:background="@drawable/selector_about_linear_layout"
+        android:clickable="true">
 
       <ImageView
+          android:id="@+id/image_save"
           android:layout_width="25dp"
           android:layout_height="25dp"
           android:src="@drawable/save"
@@ -97,6 +103,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_add_car"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
@@ -105,6 +112,7 @@
         android:textColor="#ffffff" />
 
     <Button
+        android:id="@+id/btn_buy_now"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="立即购买"

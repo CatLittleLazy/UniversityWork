@@ -30,4 +30,7 @@
 
   <color name="iron">#CCCCCC</color>
   <color name="primary">#E43F3F</color>
+  <color name="line">#e6e6e6</color>
+  <color name="font_color1">#666666</color>
+
 </resources>

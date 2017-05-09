@@ -26,6 +26,7 @@ import com.example.youmehe.intellectualpropertyright.Bean.ProductListEntity;
 import com.example.youmehe.intellectualpropertyright.R;
 import com.example.youmehe.intellectualpropertyright.Utils.OnItemClickListener;
 import com.squareup.picasso.Picasso;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,8 +75,9 @@ public class MainItemAdapter extends RecyclerView.Adapter<MainItemAdapter.Defaul
 
   @Override
   public void onBindViewHolder(MainItemAdapter.DefaultViewHolder holder, int position) {
+    DecimalFormat df = new DecimalFormat("###0.0##");//最多保留几位小数，就用几个#，最少位就用0来确定
     holder.setData(mContext, mData.get(position).getIcon(), mData.get(position).getTitle(),
-        String.format(mContext.getString(R.string.price), " " + mData.get(position).getPrice()));
+        String.format(mContext.getString(R.string.price), " " + df.format(mData.get(position).getPrice())));
   }
 
   static class DefaultViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

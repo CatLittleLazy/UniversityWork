@@ -30,7 +30,8 @@
 
     <activity
         android:name=".Activity.MainActivity"
-        android:label="@string/app_name" />
+        android:label="@string/app_name"
+        android:windowSoftInputMode="adjustNothing" />
     <activity
         android:name="com.yalantis.ucrop.UCropActivity"
         android:screenOrientation="portrait"
@@ -76,6 +77,10 @@
         android:theme="@style/AppTheme.NoActionBar" />
     <activity
         android:name=".Activity.UpdateServerActivity"
+        android:label=""
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".Activity.MySaveActivity"
         android:label=""
         android:theme="@style/AppTheme.NoActionBar" />
   </application>

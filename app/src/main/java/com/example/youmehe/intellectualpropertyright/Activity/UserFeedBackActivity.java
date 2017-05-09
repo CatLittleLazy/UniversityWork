@@ -55,8 +55,12 @@ public class UserFeedBackActivity extends AppCompatActivity implements View.OnCl
     setContentView(R.layout.activity_user_feed_back);
 
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
     setSupportActionBar(toolbar);
+    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        finish();
+      }
+    });
 
     //绑定按钮
     init();

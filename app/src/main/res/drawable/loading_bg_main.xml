@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:top="300dp"
+      android:left="300dp"
+      android:right="300dp"
+      android:bottom="300dp">
+    <bitmap
+        android:src="@drawable/loading_bg_icon"
+        android:gravity="center" />
+  </item>
+  <item android:drawable="@drawable/bg_loading" />
+</layer-list>

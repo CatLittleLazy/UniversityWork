@@ -10,8 +10,7 @@ public class ProductListEntity {
 
   /**
    * ret_code : 0 total_count : 19 page_count : 4 page_no : 1 ret_result :
-   * [{"id":1,"icon":"http://youmehe.wang/universityWork/product_icon/icon_1.jpg","title":"【新知青】专利申请/代理
-   * 发明实用新型外观专利商标注册版权登","price":"20.00","content":"oeuaoeouaoeuaoeu","owner":"测试账号","rating":"","saled":0},{"id":2,"icon":"http://youmehe.wang/universityWork/product_icon/icon_2.jpg","title":"外观专利/著作版权/实用性新型专利/发明/申请/保护/维权/","price":"850.00","content":"uoeauaoeuaoeuaoe","owner":"测试账号","rating":"","saled":0},{"id":3,"icon":"http://youmehe.wang/universityWork/product_icon/icon_3.jpg","title":"专利申请/专利转让-实用新型专利/外观设计/软件著作权/版权","price":"295.00","content":"uoeuaoeuoeauaoeuoeu","owner":"测试账号","rating":"","saled":0},{"id":4,"icon":"http://youmehe.wang/universityWork/product_icon/icon_4.jpg","title":"包拿证书专利申请/专利代理/（实用新型、外观设计）","price":"75.00","content":"aoueoeauoeauoeauaoeu","owner":"测试账号","rating":"","saled":0},{"id":5,"icon":"http://youmehe.wang/universityWork/product_icon/icon_5.jpg","title":"专利申请发明实用新型外观专利代理转让代写撰写商标专利申请加急","price":"100.00","content":"aoeuoaeuaoeuoaeuoeuoaeu","owner":"测试账号","rating":"","saled":0}]
+   * [{"id":21,"icon":"http://youmehe.wang/product_icon/测试账号_1494148126.png","title":"还没供","price":1.25,"content":"打工","owner":"测试账号","rating":"1","saled":1},{"id":20,"icon":"http://youmehe.wang/product_icon/测试账号_1494147912.png","title":"沉迷红楼梦","price":3.69,"content":"咯倚天屠龙记","owner":"测试账号","rating":"1","saled":0},{"id":19,"icon":"http://youmehe.wang/product_icon/测试账号_1494147136.png","title":"沉迷红楼梦","price":3.69,"content":"咯倚天屠龙记","owner":"测试账号","rating":"0","saled":0},{"id":18,"icon":"http://youmehe.wang/product_icon/测试账号_1494146310.png","title":"测试账号","price":0,"content":"aouoaeuaoeuaoeuoeuoaeuaoeu","owner":"测试账号","rating":"1","saled":0},{"id":17,"icon":"http://youmehe.wang/imgs/测试账号_1494146235.png","title":"测试账号","price":0,"content":"aoeuaoeuaoeuaoeuoeauaoeuoaeuaoe","owner":"测试账号","rating":"2","saled":0}]
    */
 
   private int ret_code;
@@ -62,20 +61,20 @@ public class ProductListEntity {
 
   public static class RetResultBean {
     /**
-     * id : 1
-     * icon : http://youmehe.wang/universityWork/product_icon/icon_1.jpg
-     * title : 【新知青】专利申请/代理 发明实用新型外观专利商标注册版权登
-     * price : 20.00
-     * content : oeuaoeouaoeuaoeu
+     * id : 21
+     * icon : http://youmehe.wang/product_icon/测试账号_1494148126.png
+     * title : 还没供
+     * price : 1.25
+     * content : 打工
      * owner : 测试账号
-     * rating :
-     * saled : 0
+     * rating : 1
+     * saled : 1
      */
 
     private int id;
     private String icon;
     private String title;
-    private String price;
+    private double price;
     private String content;
     private String owner;
     private String rating;
@@ -105,11 +104,11 @@ public class ProductListEntity {
       this.title = title;
     }
 
-    public String getPrice() {
+    public double getPrice() {
       return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
       this.price = price;
     }
 

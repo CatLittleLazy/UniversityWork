@@ -17,7 +17,7 @@ public class Constants {
   //检测用户名是否注册
   public static String checkName = "http://youmehe.wang/universityWork/check_name.php";
   //获取服务的列表
-  public static String producList = "http://youmehe.wang/universityWork/product_list.php";
+  public static String producList = "http://youmehe.wang/universityWork/test.php";
   //登录方法
   public static String login = "http://youmehe.wang/universityWork/user_login.php";
   //清空购物车
@@ -26,6 +26,10 @@ public class Constants {
   public static String bookGoods = "http://youmehe.wang/universityWork/bookGoods.php";
   //获取知识产权服务详情
   public static String getMoreInfo = "http://youmehe.wang/universityWork/getMoreInfo.php";
+  //收藏知识产权服务
+  public static String userSaveProduct = "http://youmehe.wang/universityWork/user_saved_product.php";
+  //加入购物车
+  public static String userCarProduct = "http://youmehe.wang/universityWork/user_car_product.php";
   //更改个人信息
   public static String updateSelf = "http://youmehe.wang/universityWork/update_self.php";
   //上传图片

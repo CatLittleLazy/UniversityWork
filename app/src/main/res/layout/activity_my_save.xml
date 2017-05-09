@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_edit_my_info">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:background="@color/primary"
+      android:elevation="3dp"
+      app:navigationIcon="@drawable/ic_arrow_back"
+      app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="我的收藏"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+  </android.support.v7.widget.Toolbar>
+
+
+  <RelativeLayout
+      android:id="@+id/relative_no_data"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/image_car"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/save"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp" />
+
+    <View
+        android:layout_toLeftOf="@id/image_car"
+        android:layout_width="100dp"
+        android:layout_marginTop="285dp"
+        android:layout_height="1dp"
+        android:background="#c0c0c0" />
+
+    <View
+        android:layout_toRightOf="@id/image_car"
+        android:layout_width="100dp"
+        android:layout_marginTop="285dp"
+        android:layout_height="1dp"
+        android:background="#c0c0c0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="您的收藏夹还是空的\n\n快去挑选您满意的知识产权服务吧"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/image_car"
+        android:layout_margin="20dp" />
+
+  </RelativeLayout>
+
+
+  <ListView
+      android:id="@+id/list_my_save"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+</LinearLayout>

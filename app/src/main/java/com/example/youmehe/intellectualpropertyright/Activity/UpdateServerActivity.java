@@ -1,8 +1,6 @@
 package com.example.youmehe.intellectualpropertyright.Activity;
 
-import android.app.AlertDialog;
 import android.content.ContentResolver;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -21,6 +19,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import butterknife.Bind;
@@ -29,6 +28,7 @@ import butterknife.OnClick;
 import com.example.youmehe.intellectualpropertyright.Bean.ChangeIconEntity;
 import com.example.youmehe.intellectualpropertyright.R;
 import com.example.youmehe.intellectualpropertyright.Utils.NetWorkUtils;
+import com.example.youmehe.intellectualpropertyright.Utils.ShowDialog;
 import com.example.youmehe.intellectualpropertyright.Utils.T;
 import com.google.gson.Gson;
 import com.yalantis.ucrop.UCrop;
@@ -50,6 +50,12 @@ public class UpdateServerActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_update_server);
     ButterKnife.bind(this);
+    setSupportActionBar(toolbar);
+    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        finish();
+      }
+    });
   }
 
   private Uri photoUri;//跳转至裁图时使用的Uri
@@ -108,24 +114,23 @@ public class UpdateServerActivity extends AppCompatActivity {
     }
   }
 
+  ShowDialog showDialog;
+
   //弹出Dialog选择设置头像方式  2017.4.7  by  WYT
   @OnClick(R.id.image_post_icon) void OnAlertIconClick() {
-    new AlertDialog.Builder(this).setTitle(getString(R.string.user_fragment_icon_switch_title))
-        .setNegativeButton(getString(R.string.user_fragment_icon_from_pick_picture),
-            new DialogInterface.OnClickListener() {
-              @Override
-              public void onClick(DialogInterface dialog, int which) {
-                userIconFromPicture();
-              }
-            })
-        .setPositiveButton(getString(R.string.user_fragment_icon_from_take_photo),
-            new DialogInterface.OnClickListener() {
-              @Override
-              public void onClick(DialogInterface dialog, int which) {
-                userIconFromCamera();
-              }
-            })
-        .show();
+    showDialog = new ShowDialog();
+    showDialog.showProductIcon(this, "上传封面", "请选择从上传图片方式",
+        new ShowDialog.OnBottomClickListener() {
+          @Override
+          public void positive() {
+            userIconFromPicture();
+          }
+
+          @Override
+          public void negtive() {
+            userIconFromCamera();
+          }
+        });
   }
 
   //跳转到相册
@@ -175,6 +180,10 @@ public class UpdateServerActivity extends AppCompatActivity {
       return;
     }
     if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(content) && !TextUtils.isEmpty(price)) {
+      if (Double.valueOf(price) == 0) {
+        T.shortToast(UpdateServerActivity.this, "暂不支持上传免费服务");
+        return;
+      }
       new Thread() {
         public void run() {
           String retString = NetWorkUtils.getInstance().uploadFileToPhpServer(

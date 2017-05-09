@@ -132,16 +132,21 @@ public class NetWorkUtils {
   }
 
   /**
-   * 获取知识产权服务列表
+   * 获取知识产权列表页
    *
-   * @param pageSize 每页多少
-   * @param pageNo 当前页
+   * @param pageSize 每页条数
+   * @param pageNo 当前页码
+   * @param sort 排序方式 product_saled(销售量从高到低)  product_rating(评价从高到低) product_price_top_to_low(价格从高到低)
+   * product_price_low_to_top(价格从低到高)
+   * @param key 关键字搜索
    */
-  public String getProductList(String pageSize, String pageNo) {
+  public String getProductList(String pageSize, String pageNo, String sort, String key) {
     OkHttpClient client = new OkHttpClient();
     FormBody formBody = new FormBody.Builder()
         .add("page_size", pageSize)
         .add("page_no", pageNo)
+        .add("sort", sort)
+        .add("key", key)
         .build();
 
     Request request = new Request.Builder()
@@ -238,6 +243,72 @@ public class NetWorkUtils {
 
     Request request = new Request.Builder()
         .url(Constants.getMoreInfo)
+        .post(formBody)
+        .build();
+
+    Response response = null;
+    try {
+      response = client.newCall(request).execute();
+      if (response.isSuccessful()) {
+        return response.body().string();
+      } else {
+        throw new IOException("Unexpected code " + response);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  /**
+   * @param userName 用户名
+   * @param productId 知识产权服务Id
+   * @param type 操作类型 add添加  del 删除  select 查询
+   */
+  public String userSave(String userName, String productId, String type) {
+    OkHttpClient client = new OkHttpClient();
+    FormBody formBody = new FormBody.Builder()
+        .add("product_id", productId)
+        .add("user_name", userName)
+        .add("type", type)
+        .build();
+
+    Request request = new Request.Builder()
+        .url(Constants.userSaveProduct)
+        .post(formBody)
+        .build();
+
+    Response response = null;
+    try {
+      response = client.newCall(request).execute();
+      if (response.isSuccessful()) {
+        return response.body().string();
+      } else {
+        throw new IOException("Unexpected code " + response);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  /**
+   *
+   * @param userName
+   * @param productId
+   * @param type
+   * @return
+   */
+  public String userCar(String userName, String productId, String type) {
+    OkHttpClient client = new OkHttpClient();
+    FormBody formBody = new FormBody.Builder()
+        .add("product_id", productId)
+        .add("user_name", userName)
+        .add("type", type)
+        .build();
+
+    Request request = new Request.Builder()
+        .url(Constants.userCarProduct)
         .post(formBody)
         .build();
 

@@ -127,4 +127,7 @@
   <string name="title_activity_edit_user_info">EditUserInfoActivity</string>
   <string name="title_activity_user_feed_back">UserFeedBackActivity</string>
   <string name="price">¥ %s</string>
+  <string name="saled">累计销量 %s</string>
+  <string name="title_activity_my_save">MySaveActivity</string>
+  <string name="buy_num">结算(%s)</string>
 </resources>

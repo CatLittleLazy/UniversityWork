@@ -17,8 +17,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.example.youmehe.intellectualpropertyright.Bean.CheckUserNameEntity;
 import com.example.youmehe.intellectualpropertyright.Bean.ShortResponseEntity;
-import com.example.youmehe.intellectualpropertyright.Utils.NetWorkUtils;
 import com.example.youmehe.intellectualpropertyright.R;
+import com.example.youmehe.intellectualpropertyright.Utils.NetWorkUtils;
+import com.example.youmehe.intellectualpropertyright.Utils.T;
 import com.google.gson.Gson;
 
 public class SignupActivity extends AppCompatActivity {
@@ -98,6 +99,10 @@ public class SignupActivity extends AppCompatActivity {
         CheckUserNameEntity mCheckUserNameEntity =
             gson.fromJson(checkNameJson, CheckUserNameEntity.class);
         Log.e(TAG, "run: " + checkNameJson);
+        if (checkNameJson == null) {
+          mHandler.sendEmptyMessage(10101);
+          return;
+        }
         if (mCheckUserNameEntity.getRet_code() == 0) {//判断用户名是否唯一
           String signJson = NetWorkUtils.getInstance().signUser(name, password, userType);
           ShortResponseEntity mShortResponseEntity =
@@ -165,6 +170,10 @@ public class SignupActivity extends AppCompatActivity {
           intent.putExtra("userName", name);
           startActivity(intent);
           finish();
+          break;
+        case 10101:
+          progressDialog.dismiss();
+          T.shortToast(SignupActivity.this, "请检查您的网络");
           break;
       }
       return false;

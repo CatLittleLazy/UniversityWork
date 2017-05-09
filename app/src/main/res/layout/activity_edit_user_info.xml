@@ -53,7 +53,7 @@
         android:layout_height="85dp"
         android:layout_width="85dp"
         android:id="@+id/image_edit_user_icon"
-        android:src="@drawable/logo"
+        android:src="@drawable/default_head"
         android:scaleType="centerCrop"
         android:layout_marginRight="10dp"
         android:layout_gravity="center" />

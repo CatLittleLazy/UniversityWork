@@ -6,8 +6,10 @@
     android:background="#ffffff">
 
   <android.support.v7.widget.SearchView
+      android:id="@+id/search_view"
       android:layout_width="match_parent"
       android:layout_height="50dp"
+      android:queryHint="请输入所需要的知识产权服务"
       android:searchIcon="@drawable/search" />
 
   <View
@@ -21,9 +23,12 @@
       android:orientation="horizontal">
 
     <LinearLayout
+        android:id="@+id/linear_saled"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
+        android:background="@drawable/selector_about_linear_layout"
+        android:clickable="true"
         android:orientation="vertical">
 
       <ImageView
@@ -49,9 +54,12 @@
         android:background="#f0f0f0" />
 
     <LinearLayout
+        android:id="@+id/linear_rating"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:background="@drawable/selector_about_linear_layout"
+        android:clickable="true"
         android:orientation="vertical">
 
       <ImageView
@@ -78,9 +86,12 @@
         android:background="#f0f0f0" />
 
     <LinearLayout
+        android:id="@+id/linear_price_low_to_top"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/selector_about_linear_layout"
+        android:clickable="true"
         android:layout_weight="1">
 
       <ImageView
@@ -89,7 +100,6 @@
           android:src="@drawable/price_low_to_top"
           android:layout_gravity="center"
           android:layout_marginTop="@dimen/margin_10dp" />
-
 
       <TextView
           android:layout_width="wrap_content"
@@ -107,8 +117,11 @@
         android:background="#f0f0f0" />
 
     <LinearLayout
+        android:id="@+id/linear_price_top_to_low"
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:background="@drawable/selector_about_linear_layout"
+        android:clickable="true"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -118,7 +131,6 @@
           android:src="@drawable/price_top_to_low"
           android:layout_gravity="center"
           android:layout_marginTop="@dimen/margin_10dp" />
-
 
       <TextView
           android:layout_width="wrap_content"
@@ -137,6 +149,44 @@
       android:layout_height="1dp"
       android:background="#f0f0f0" />
 
+  <RelativeLayout
+      android:id="@+id/relative_no_data"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/image_car"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/no_search_data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp" />
+
+    <View
+        android:layout_toLeftOf="@id/image_car"
+        android:layout_width="100dp"
+        android:layout_marginTop="185dp"
+        android:layout_height="1dp"
+        android:background="#c0c0c0" />
+
+    <View
+        android:layout_toRightOf="@id/image_car"
+        android:layout_width="100dp"
+        android:layout_marginTop="185dp"
+        android:layout_height="1dp"
+        android:background="#c0c0c0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="!未查询到相关服务!"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/image_car"
+        android:layout_margin="20dp" />
+
+  </RelativeLayout>
 
   <android.support.v4.widget.SwipeRefreshLayout
       android:id="@+id/swipe_layout"

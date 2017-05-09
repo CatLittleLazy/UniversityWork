@@ -39,8 +39,10 @@ import com.example.youmehe.intellectualpropertyright.Bean.ShortResponseEntity;
 import com.example.youmehe.intellectualpropertyright.R;
 import com.example.youmehe.intellectualpropertyright.Utils.NetWorkUtils;
 import com.example.youmehe.intellectualpropertyright.Utils.SPUtils;
+import com.example.youmehe.intellectualpropertyright.Utils.ShowDialog;
 import com.example.youmehe.intellectualpropertyright.Utils.T;
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 import com.yalantis.ucrop.UCrop;
 import de.hdodenhof.circleimageview.CircleImageView;
 import java.io.BufferedReader;
@@ -76,19 +78,17 @@ public class EditUserInfoActivity extends AppCompatActivity {
     setContentView(R.layout.activity_edit_user_info);
     ButterKnife.bind(this);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
     setSupportActionBar(toolbar);
+    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        finish();
+      }
+    });
+
     //解析省市区
     mHandler.sendEmptyMessage(MSG_LOAD_DATA);
 
     sp = getSharedPreferences("myInfo", MODE_PRIVATE);
-    if (null != imageEditUserIcon) {
-      //如果本地有头像缓存则直接设置
-      final File file = new File(getExternalCacheDir(), "/userCropTemp.png");
-      if (file.exists()) {
-        imageEditUserIcon.setImageURI(Uri.fromFile(file));
-      }
-    }
     name = sp.getString("userName", "");
     sexual = sp.getString("userSexual", "");
     birthday = sp.getString("userBirthday", "");
@@ -105,6 +105,12 @@ public class EditUserInfoActivity extends AppCompatActivity {
     }
     if (!TextUtils.isEmpty(name)) {
       txtEditUserNickname.setText(name);
+    }
+    if (null != imageEditUserIcon) {
+      //如果本地有头像缓存则直接设置
+      if (!TextUtils.isEmpty(icon)) {
+        Picasso.with(this).load(icon).resize(200, 200).into(imageEditUserIcon);
+      }
     }
   }
 
@@ -266,6 +272,9 @@ public class EditUserInfoActivity extends AppCompatActivity {
           mSputils.put("userSexual", sexual);
           mSputils.put("userArea", area);
           mSputils.put("userBirthday", birthday);
+          if (msg.obj != null) {
+            mSputils.put("userIcon", msg.obj.toString());
+          }
           break;
         case SERVICE_ERROR:
           T.shortToast(EditUserInfoActivity.this, "网络连接异常");
@@ -454,24 +463,23 @@ public class EditUserInfoActivity extends AppCompatActivity {
     }
   }
 
+  ShowDialog showDialog;
+
   //弹出Dialog选择设置头像方式  2017.4.7  by  WYT
   @OnClick(R.id.linear_edit_user_icon) void OnAlertIconClick() {
-    new AlertDialog.Builder(this).setTitle(getString(R.string.user_fragment_icon_switch_title))
-        .setNegativeButton(getString(R.string.user_fragment_icon_from_pick_picture),
-            new DialogInterface.OnClickListener() {
-              @Override
-              public void onClick(DialogInterface dialog, int which) {
-                userIconFromPicture();
-              }
-            })
-        .setPositiveButton(getString(R.string.user_fragment_icon_from_take_photo),
-            new DialogInterface.OnClickListener() {
-              @Override
-              public void onClick(DialogInterface dialog, int which) {
-                userIconFromCamera();
-              }
-            })
-        .show();
+    showDialog = new ShowDialog();
+    showDialog.showProductIcon(this, "", "请选择从上传头像方式",
+        new ShowDialog.OnBottomClickListener() {
+          @Override
+          public void positive() {
+            userIconFromPicture();
+          }
+
+          @Override
+          public void negtive() {
+            userIconFromCamera();
+          }
+        });
   }
 
   //跳转到相册
@@ -522,7 +530,10 @@ public class EditUserInfoActivity extends AppCompatActivity {
         Gson gson = new Gson();
         ChangeIconEntity mChangeIconEntity = gson.fromJson(retString, ChangeIconEntity.class);
         if (mChangeIconEntity.getRet_code() == 0) {
-          mHandler.sendEmptyMessage(SUBMIT_EDIT_INFO_SUCCESS);
+          Message msg = Message.obtain();
+          msg.obj = mChangeIconEntity.getImg_name();
+          msg.what = SUBMIT_EDIT_INFO_SUCCESS;
+          mHandler.sendMessage(msg);
           setResult(23);
         } else {
           mHandler.sendEmptyMessage(SUBMIT_EDIT_INFO_FAILED);

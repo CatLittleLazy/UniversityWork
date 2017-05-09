@@ -151,6 +151,9 @@ public class LoginActivity extends AppCompatActivity {
         case _WRONG_USER_PWD_:
           Toast.makeText(LoginActivity.this, "用户密码错误", Toast.LENGTH_SHORT).show();
           break;
+
+        case 10101:
+          Toast.makeText(LoginActivity.this, "请检查您的网络", Toast.LENGTH_SHORT).show();
       }
       return false;
     }
@@ -169,6 +172,10 @@ public class LoginActivity extends AppCompatActivity {
         CheckUserNameEntity mCheckUserNameEntity =
             gson.fromJson(checkNameJson, CheckUserNameEntity.class);
         Log.e(TAG, "run: " + checkNameJson);
+        if (checkNameJson == null) {
+          mHandler.sendEmptyMessage(10101);
+          return;
+        }
         //返回-1表示用户名存在
         if (mCheckUserNameEntity.getRet_code() == -1) {
           String loginJson = NetWorkUtils.getInstance().login(userName, userPwd);

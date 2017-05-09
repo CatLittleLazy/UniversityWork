@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <item
-      android:id="@+id/navigation_home"
-      android:icon="@drawable/ic_car"
-      android:title="购物车" />
 
   <item
       android:id="@+id/navigation_dashboard"
       android:icon="@drawable/ic_dashboard_black_24dp"
       android:title="商品" />
+
+  <item
+      android:id="@+id/navigation_home"
+      android:icon="@drawable/ic_car"
+      android:title="购物车" />
 
   <item
       android:id="@+id/navigation_notifications"
